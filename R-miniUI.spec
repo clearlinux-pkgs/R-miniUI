@@ -4,7 +4,7 @@
 #
 Name     : R-miniUI
 Version  : 0.1.1
-Release  : 8
+Release  : 9
 URL      : https://cran.r-project.org/src/contrib/miniUI_0.1.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/miniUI_0.1.1.tar.gz
 Summary  : Shiny UI Widgets for Small Screens
