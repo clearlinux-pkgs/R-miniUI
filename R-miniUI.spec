@@ -4,7 +4,7 @@
 #
 Name     : R-miniUI
 Version  : 0.1.1.1
-Release  : 23
+Release  : 24
 URL      : https://cran.r-project.org/src/contrib/miniUI_0.1.1.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/miniUI_0.1.1.1.tar.gz
 Summary  : Shiny UI Widgets for Small Screens
@@ -15,9 +15,11 @@ Requires: R-shiny
 BuildRequires : R-htmltools
 BuildRequires : R-shiny
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
-that work well on small screens.
+# miniUI
+Provides UI widget and layout functions for writing Shiny apps that work well on small screens. Designed to work especially well for creating Shiny Gadgets.
 
 %prep
 %setup -q -c -n miniUI
@@ -27,10 +29,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568749226
+export SOURCE_DATE_EPOCH=1571865461
 
 %install
-export SOURCE_DATE_EPOCH=1568749226
+export SOURCE_DATE_EPOCH=1571865461
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
