@@ -4,7 +4,7 @@
 #
 Name     : R-miniUI
 Version  : 0.1.1.1
-Release  : 27
+Release  : 28
 URL      : https://cran.r-project.org/src/contrib/miniUI_0.1.1.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/miniUI_0.1.1.1.tar.gz
 Summary  : Shiny UI Widgets for Small Screens
@@ -15,29 +15,28 @@ Requires: R-shiny
 BuildRequires : R-htmltools
 BuildRequires : R-shiny
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
-# miniUI
-Provides UI widget and layout functions for writing Shiny apps that work well on small screens. Designed to work especially well for creating Shiny Gadgets.
+that work well on small screens.
 
 %prep
 %setup -q -c -n miniUI
+cd %{_builddir}/miniUI
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571865461
+export SOURCE_DATE_EPOCH=1589768135
 
 %install
-export SOURCE_DATE_EPOCH=1571865461
+export SOURCE_DATE_EPOCH=1589768135
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
